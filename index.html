@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Ordering System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Food Ordering System</h2>
+
+        <form id="orderForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="table">Table Number:</label>
+            <input type="number" id="table" required>
+
+            <h3>Menu</h3>
+            <div class="menu">
+                <div class="menu-item">
+                    <img src="burger.jpeg" alt="Burger">
+                    <label><input type="checkbox" name="items" value="Burger,120"> Burger - ₹120</label>
+                    <input type="number" class="qty" min="1" value="1">
+                </div>
+                <div class="menu-item">
+                    <img src="pizza.jpeg" alt="Pizza">
+                    <label><input type="checkbox" name="items" value="Pizza,250"> Pizza - ₹250</label>
+                    <input type="number" class="qty" min="1" value="1">
+                </div>
+                <div class="menu-item">
+                    <img src="pasta.jpeg" alt="Pasta">
+                    <label><input type="checkbox" name="items" value="Pasta,180"> Pasta - ₹180</label>
+                    <input type="number" class="qty" min="1" value="1">
+                </div>
+
+                <div class="menu-item">
+                    <img src="taco.jpeg" alt="Taco">
+                    <label><input type="checkbox" name="items" value="taco,150"> Taco- ₹150</label>
+                    <input type="number" class="qty" min="1" value="1">
+                </div>
+                <div class="menu-item">
+                    <img src="noodles.jpeg" alt="Noodles">
+                    <label><input type="checkbox" name="items" value="noodles,210"> Noodles- ₹210</label>
+                    <input type="number" class="qty" min="1" value="1">
+                </div>
+                
+                <div class="menu-item">
+                    <img src="friedrice.jpeg" alt="Friedrice">
+                    <label><input type="checkbox" name="items" value="friedrice,280"> Friedrice - ₹280</label>
+                    <input type="number" class="qty" min="1" value="1">
+                </div>
+                
+                <div class="menu-item">
+                    <img src="chocolate milkshake.jpeg" alt="Chocolate milkshake">
+                    <label><input type="checkbox" name="items" value="Chocolate milkshake,120"> Chocolate milkshake - ₹120</label>
+                    <input type="number" class="qty" min="1" value="1">
+                </div>
+                <div class="menu-item">
+                    <img src="lassi.jpeg" alt="Lassi">
+                    <label><input type="checkbox" name="items" value="lassi,100"> Lassi- ₹100</label>
+                    <input type="number" class="qty" min="1" value="1">
+                </div>
+                </div>
+
+            <button type="submit">Place Order</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
