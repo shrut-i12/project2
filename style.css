@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: rgb(199, 159, 159);
+    text-align: center;
+}
+
+.container {
+    background: rgba(69, 65, 65, 0.7);
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column; /* Arranges items in a vertical column */
+    align-items: center; /* Centers items horizontally */
+    gap: 20px; /* Adds space between items */
+}
+
+.menu-item {
+    background: white;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.menu-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+input, button {
+    padding: 10px;
+    margin-top: 10px;
+}
+
