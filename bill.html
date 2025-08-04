@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Summary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Bill Summary</h2>
+        <p><strong>Name:</strong> <span id="billName"></span></p>
+        <p><strong>Table:</strong> <span id="billTable"></span></p>
+        <h3>Ordered Items:</h3>
+        <ul id="billItems"></ul>
+        <h3>Total Amount: ₹<span id="billTotal"></span></h3>
+        <a href="index.html">Order Again</a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const name = localStorage.getItem("name");
+            const table = localStorage.getItem("table");
+            const items = JSON.parse(localStorage.getItem("items"));
+            const total = localStorage.getItem("total");
+
+            document.getElementById("billName").textContent = name;
+            document.getElementById("billTable").textContent = table;
+            document.getElementById("billTotal").textContent = total;
+
+            const itemList = document.getElementById("billItems");
+            items.forEach(item => {
+                const li = document.createElement("li");
+                li.textContent = item.name + " (₹" + item.price + ") ×" + item.quantity + " = ₹" + (item.price * item.quantity);
+                itemList.appendChild(li);
+            });
+        });
+    </script>
+</body>
+</html>
